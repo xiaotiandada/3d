@@ -80,7 +80,7 @@ const Wrapper = () => {
   );
 };
 
-const Comics: FC = () => {
+const Comic: FC = () => {
   return (
     <Canvas
       camera={{
@@ -113,4 +113,4 @@ const Comics: FC = () => {
   );
 };
 
-export default Comics;
+export default Comic;
