@@ -1,13 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
+
 import Comics from './components/Comics';
-// import MapDrawer from './components/MapDrawer';
-// import MapLegend from './components/MapLegend';
 
 function App() {
   return (
     <>
-      <Comics />
-      {/* <MapLegend /> */}
-      {/* <MapDrawer /> */}
+      <Routes>
+        <Route path="/" element={<Comics />} />
+        <Route path="/comic" element={<Comics />} />
+      </Routes>
     </>
   );
 }
