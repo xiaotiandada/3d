@@ -8,6 +8,7 @@ import React from 'react';
 
 import MediaCard from '../../components/MediaCard/index';
 import comicImage from './images/comic.png';
+import webgl_animation_keyframesImage from './images/webgl_animation_keyframes.png';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -22,6 +23,13 @@ const workList = [
     title: '3D漫画',
     description: '🕷 spider man',
     image: comicImage,
+    three: true,
+  },
+  {
+    link: '/webgl_animation_keyframes',
+    title: '加载模型',
+    description: '加载 GLTF 模型',
+    image: webgl_animation_keyframesImage,
     three: true,
   },
 ];
