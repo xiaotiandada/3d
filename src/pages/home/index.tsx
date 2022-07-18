@@ -9,6 +9,7 @@ import React from 'react'
 import MediaCard from '../../components/MediaCard/index'
 import comicImage from './images/comic.png'
 import webgl_animation_keyframesImage from './images/webgl_animation_keyframes.png'
+import webgl_loader_fbxImage from './images/webgl_loader_fbx.png'
 import webgl_loader_objImage from './images/webgl_loader_obj.png'
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -38,6 +39,13 @@ const workList = [
     title: '加载模型',
     description: '加载 OBJ 模型',
     image: webgl_loader_objImage,
+    three: true,
+  },
+  {
+    link: '/webgl_loader_fbx',
+    title: '加载模型',
+    description: '加载 FBX 模型',
+    image: webgl_loader_fbxImage,
     three: true,
   },
 ]

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Comic from './pages/comic'
 import Home from './pages/home'
 import Webgl_animation_keyframes from './pages/webgl_animation_keyframes'
+import Webgl_loader_fbx from './pages/webgl_loader_fbx'
 import Webgl_loader_obj from './pages/webgl_loader_obj'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           element={<Webgl_animation_keyframes />}
         />
         <Route path="/webgl_loader_obj" element={<Webgl_loader_obj />} />
+        <Route path="/webgl_loader_fbx" element={<Webgl_loader_fbx />} />
       </Routes>
     </>
   )
