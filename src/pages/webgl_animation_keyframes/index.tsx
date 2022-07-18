@@ -1,4 +1,4 @@
-import { Environment, OrbitControls, Stats } from '@react-three/drei'
+import { Environment, Loader, OrbitControls, Stats } from '@react-three/drei'
 import { Canvas, useThree } from '@react-three/fiber'
 import { FC, Suspense } from 'react'
 import * as THREE from 'three'
@@ -52,6 +52,7 @@ const Comic: FC = () => {
           enablePan={false}
         />
       </Canvas>
+      <Loader />
       {process.env.NODE_ENV === 'development' && <Stats className="fps" />}
     </>
   )
