@@ -6,15 +6,21 @@ source: https://sketchfab.com/models/94b24a60dc1b48248de50bf087c0f042
 title: Littlest Tokyo
 */
 
-import { useAnimations, useGLTF } from '@react-three/drei';
-import { useRef } from 'react';
+import { useAnimations, useGLTF } from '@react-three/drei'
+import { useEffect, useRef } from 'react'
+import * as THREE from 'three'
 
 export default function Model({ ...props }) {
-  const group = useRef<THREE.Group>(null);
+  const group = useRef<THREE.Group>(null)
   const { nodes, materials, animations }: any = useGLTF(
     '/models/gltf/LittlestTokyo.glb'
-  );
-  const { actions } = useAnimations(animations, group);
+  )
+  const { actions } = useAnimations(animations, group)
+
+  useEffect(() => {
+    actions[animations[0]?.name]?.play()
+  }, [actions, animations])
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="OSG_Scene">
@@ -992,7 +998,7 @@ export default function Model({ ...props }) {
         </group>
       </group>
     </group>
-  );
+  )
 }
 
-useGLTF.preload('/models/gltf/LittlestTokyo.glb');
+useGLTF.preload('/models/gltf/LittlestTokyo.glb')
