@@ -1,21 +1,22 @@
-import './index.css';
+import './index.css'
 
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
-import React from 'react';
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
+import { styled } from '@mui/material/styles'
+import React from 'react'
 
-import MediaCard from '../../components/MediaCard/index';
-import comicImage from './images/comic.png';
-import webgl_animation_keyframesImage from './images/webgl_animation_keyframes.png';
+import MediaCard from '../../components/MediaCard/index'
+import comicImage from './images/comic.png'
+import webgl_animation_keyframesImage from './images/webgl_animation_keyframes.png'
+import webgl_loader_objImage from './images/webgl_loader_obj.png'
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-}));
+}))
 
 const workList = [
   {
@@ -32,7 +33,14 @@ const workList = [
     image: webgl_animation_keyframesImage,
     three: true,
   },
-];
+  {
+    link: '/webgl_loader_obj',
+    title: '加载模型',
+    description: '加载 OBJ 模型',
+    image: webgl_loader_objImage,
+    three: true,
+  },
+]
 
 const Home = () => {
   return (
@@ -62,7 +70,7 @@ const Home = () => {
         </Grid>
       </Box>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

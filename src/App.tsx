@@ -1,8 +1,9 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom'
 
-import Comic from './pages/comic';
-import Home from './pages/home';
-import Webgl_animation_keyframes from './pages/webgl_animation_keyframes';
+import Comic from './pages/comic'
+import Home from './pages/home'
+import Webgl_animation_keyframes from './pages/webgl_animation_keyframes'
+import Webgl_loader_obj from './pages/webgl_loader_obj'
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
           path="/webgl_animation_keyframes"
           element={<Webgl_animation_keyframes />}
         />
+        <Route path="/webgl_loader_obj" element={<Webgl_loader_obj />} />
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
